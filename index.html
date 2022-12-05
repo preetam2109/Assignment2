@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="index.css">
+<Script src="index.js"></Script>	
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<form onsubmit="callvalue()">
+		Enter Sentence:<input id="sentence" type="text" placeholder="Enter sentence"><br></br>
+		Enter Letter:<input id="letter" type="text" placeholder="Enter letter"><br></br>
+		<input type="submit">
+
+
+	</form>
+
+
+	<Script>
+		
+
+		
+		
+		function callvalue(){
+			let Sentence=document.getElementById("sentence").value;
+			let Letter=document.getElementById("letter").value;
+			var position = Sentence.indexOf(Letter);
+			var result = Sentence.substring(position+1 , Sentence.length );
+			if(position==-1){
+				document.writeln("The letter does not exist is the sentence");
+			}else{
+			document.writeln("1. Sentence:"+Sentence);
+			document.writeln("<br>")
+			document.writeln("2. Letter:"+Letter);
+			document.writeln("<br>")
+			document.writeln("3. Result:"+result)
+		}
+			
+		}
+	
+	
+
+		
+		
+
+
+	</Script>
+</body>
+</html>
